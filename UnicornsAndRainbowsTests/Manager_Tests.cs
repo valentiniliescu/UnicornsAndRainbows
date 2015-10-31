@@ -17,7 +17,8 @@ namespace UnicornsAndRainbowsTests
 
             var clickCounter = new ClickCounter();
 
-            Manager manager = new Manager(userInterface, configuration, browserNavigator, clickCounter);
+            new ClickCountManager(userInterface, clickCounter);
+            new Manager(userInterface, configuration, browserNavigator);
 
             userInterface.SimulateButtonClick("Puppies");
             Assert.AreEqual(configuration.SearchRoot + "Puppies", browserNavigator.Uri.OriginalString);
@@ -35,7 +36,8 @@ namespace UnicornsAndRainbowsTests
 
             var clickCounter = new ClickCounter();
 
-            Manager manager = new Manager(userInterface, configuration, browserNavigator, clickCounter);
+            new ClickCountManager(userInterface, clickCounter);
+            new Manager(userInterface, configuration, browserNavigator);
 
             configuration.SearchRoot = "http://www.example.com/makethesearch/term=";
             userInterface.SimulateButtonClick("Puppies");

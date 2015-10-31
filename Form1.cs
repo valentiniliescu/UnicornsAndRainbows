@@ -13,7 +13,8 @@ namespace UnicornsAndRainbows
             var browserNavigator = new BrowserNavigator();
             var clickCounter = new ClickCounter();
 
-            Manager manager = new Manager(userInterface, configuration, browserNavigator, clickCounter);
+            new ClickCountManager(userInterface, clickCounter);
+            new Manager(userInterface, configuration, browserNavigator);
         }
     }
 }
