@@ -54,9 +54,10 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="ClickCountManager.cs" />
-    <Compile Include="Manager.cs" />
+    <Compile Include="SearchEngineManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchEngine.cs" />
     <Compile Include="UserInterface.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

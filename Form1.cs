@@ -13,8 +13,10 @@ namespace UnicornsAndRainbows
             var browserNavigator = new BrowserNavigator();
             var clickCounter = new ClickCounter();
 
+            var searchEngine = new SearchEngine(configuration, browserNavigator);
+
             ClickCountManager.Setup(userInterface, clickCounter);
-            Manager.Setup(userInterface, configuration, browserNavigator);
+            SearchEngineManager.Setup(userInterface, searchEngine);
         }
     }
 }

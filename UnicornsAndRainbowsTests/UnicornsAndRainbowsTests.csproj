@@ -52,7 +52,7 @@
   <ItemGroup>
     <Compile Include="BrowserNavigatorSimulator.cs" />
     <Compile Include="ClickCounterManager_Tests.cs" />
-    <Compile Include="Manager_Tests.cs" />
+    <Compile Include="SearchEngineManager_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserInterfaceSimulator.cs" />
   </ItemGroup>
