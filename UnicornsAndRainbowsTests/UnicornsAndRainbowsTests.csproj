@@ -50,6 +50,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="SearchEngine_Tests.cs" />
+    <Compile Include="SearchEngineSimulator.cs" />
     <Compile Include="BrowserNavigatorSimulator.cs" />
     <Compile Include="ClickCounterManager_Tests.cs" />
     <Compile Include="SearchEngineManager_Tests.cs" />
