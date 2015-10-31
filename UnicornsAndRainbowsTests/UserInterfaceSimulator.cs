@@ -1,25 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnicornsAndRainbows;
 
 namespace UnicornsAndRainbowsTests
 {
     class UserInterfaceSimulator: IUserInterface
     {
-        public event EventHandlerString OnButtonClick;
+        public event EventHandler<string> OnButtonClick;
 
         public void SimulateButtonClick(string searchTerm)
         {
             if (OnButtonClick != null)
             {
-                OnButtonClick(searchTerm);
+                OnButtonClick(this, searchTerm);
             }
         }
 
-        public int Count { get; set; }
+        public int Count { get; private set; }
 
         public void SetCount(int count)
         {

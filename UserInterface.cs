@@ -1,20 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UnicornsAndRainbows
 {
     public interface IUserInterface
     {
-        event EventHandlerString OnButtonClick;
+        event EventHandler<string> OnButtonClick;
 
         void SetCount(int count);
     }
-
-    public delegate void EventHandlerString(string s);
 
     public class UserInterface : IUserInterface
     {
@@ -28,13 +22,13 @@ namespace UnicornsAndRainbows
             m_countLabel = countLabel;
         }
 
-        public event EventHandlerString OnButtonClick;
+        public event EventHandler<string> OnButtonClick;
 
         void ButtonClick(object sender, EventArgs e)
         {
             if (OnButtonClick != null)
             {
-                OnButtonClick(((Button)sender).Text);
+                OnButtonClick(sender, ((Button)sender).Text);
             }
         }
 

@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BrowserNavigator.cs" />
+    <Compile Include="ClickCounter.cs" />
     <Compile Include="Configuration.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
