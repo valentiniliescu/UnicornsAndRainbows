@@ -2,9 +2,9 @@
 
 namespace UnicornsAndRainbows
 {
-    public class Manager
+    public static class Manager
     {
-        public Manager(IUserInterface userInterface, Configuration configuration, IBrowserNavigator browserNavigator)
+        public static void Setup(IUserInterface userInterface, Configuration configuration, IBrowserNavigator browserNavigator)
         {
             userInterface.OnButtonClick += (sender, searchTerm) => browserNavigator.NavigateToUrl(new Uri(configuration.SearchRoot + searchTerm));
         }

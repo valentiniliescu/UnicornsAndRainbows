@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace UnicornsAndRainbows
+﻿namespace UnicornsAndRainbows
 {
-    public class ClickCountManager
+    public static class ClickCountManager
     {
-        public ClickCountManager(IUserInterface userInterface, IClickCounter clickCounter)
+        public static void Setup(IUserInterface userInterface, IClickCounter clickCounter)
         {
             userInterface.OnButtonClick += (sender, searchTerm) => clickCounter.IncrementCount();
             clickCounter.CountIncremented += (sender, count) => userInterface.SetCount(count);
